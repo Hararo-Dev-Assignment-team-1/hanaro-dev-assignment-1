@@ -1,68 +1,158 @@
-const calendarSlider = document.getElementById("calendarSlider");
-const sliderPrevBtn = document.getElementById("sliderPrevBtn");
-const sliderNextBtn = document.getElementById("sliderNextBtn");
+const sliderData = [
+  {
+    img: "../img/area/slider/slider-1.jpg",
+    title: "양재천 벚꽃 등(燈) 축제",
+    location: "서울 서초구",
+    period: "2025. 4. 3 ~ 2025. 4. 27.",
+    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+  },
+  {
+    img: "../img/area/slider/slider-2.jpg",
+    title: "예시 축제 제목",
+    location: "서울 강남구",
+    period: "2025. 5. 1 ~ 2025. 5. 15.",
+    place: "서울특별시 강남구 테헤란로",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "예시 축제 제목",
+    location: "서울 강남구",
+    period: "2025. 5. 1 ~ 2025. 5. 15.",
+    place: "서울특별시 강남구 테헤란로",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "예시 축제 제목",
+    location: "서울 강남구",
+    period: "2025. 5. 1 ~ 2025. 5. 15.",
+    place: "서울특별시 강남구 테헤란로",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "예시 축제 제목",
+    location: "서울 강남구",
+    period: "2025. 5. 1 ~ 2025. 5. 15.",
+    place: "서울특별시 강남구 테헤란로",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "예시 축제 제목",
+    location: "서울 강남구",
+    period: "2025. 5. 1 ~ 2025. 5. 15.",
+    place: "서울특별시 강남구 테헤란로",
+  },
+];
 
-let currentPage = 0;
-let totalPages = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderWrapper = document.querySelector(".item-slider-wrapper");
+  const sliderContainer = document.querySelector(".slider-container");
+  const prevBtn = document.getElementById("sliderPrevBtn");
+  const nextBtn = document.getElementById("sliderNextBtn");
 
-function generateCalendarPages(startDate, totalWeeks = 4) {
-  calendarSlider.innerHTML = "";
-
-  const dayKor = ["일", "월", "화", "수", "목", "금", "토"];
-
-  for (let w = 0; w < totalWeeks; w++) {
-    const page = document.createElement("div");
-    page.className = "slider-page";
-
-    for (let i = 0; i < 14; i++) {
-      const dateObj = new Date(startDate);
-      dateObj.setDate(startDate.getDate() + w * 14 + i);
-
-      const dayIdx = dateObj.getDay();
-      const date = dateObj.getDate();
-      const day = dayKor[dayIdx];
-
-      const cell = document.createElement("div");
-      cell.className = "calendar-day day-" + dayIdx;
-      if (w === 0 && i === 0) cell.classList.add("selected");
-
-      cell.innerHTML = `
-        <div class="date">${date}</div>
-        <div class="day">${w === 0 && i === 0 ? "오늘" : day}</div>
-      `;
-
-      cell.addEventListener("click", () => {
-        document
-          .querySelectorAll(".calendar-day")
-          .forEach((d) => d.classList.remove("selected"));
-        cell.classList.add("selected");
-      });
-
-      page.appendChild(cell);
+  sliderData.forEach((item, index) => {
+    const slide = document.createElement("div");
+    slide.className = "item-wrapper";
+    slide.innerHTML = `
+      <div class="img-wrapper">
+        <img src="${item.img}" alt="슬라이드 ${index + 1}" />
+      </div>
+      <div class="item-content-wrapper">
+        <div class="item-title">
+          <h2>${item.title}</h2>
+          <span>${item.location}</span>
+        </div>
+        <div class="item-content">
+          <div class="info-wrapper">
+            <div class="info-content">
+              <span>기간</span>
+              <span class="info">${item.period}</span>
+            </div>
+            <div class="info-content">
+              <span>장소</span>
+              <span class="info">${item.place}</span>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="site">바로가기</div>
+            <div class="road">길찾기</div>
+          </div>
+        </div>
+      </div>
+    `;
+    if (index === 0) {
+      slide.classList.add("selected");
     }
+    sliderContainer.appendChild(slide);
+  });
 
-    calendarSlider.appendChild(page);
+  const slides = document.querySelectorAll(".item-wrapper");
+  const totalSlides = slides.length;
+
+  // const viewportWidth = sliderWrapper.clientWidth;
+
+  const firstSlideStyles = window.getComputedStyle(slides[0]);
+  const slideMarginRight = parseInt(firstSlideStyles.marginRight, 10) || 0;
+  const slideWidth = slides[0].offsetWidth + slideMarginRight;
+
+  let currentIndex = 0;
+  function slideUpdate(dir) {
+    const computedStyle = window.getComputedStyle(sliderContainer);
+    const transform = computedStyle.getPropertyValue("transform");
+
+    let currentX = 0;
+    if (transform && transform !== "none") {
+      const matrixValues = transform.match(/matrix.*\((.+)\)/)[1].split(", ");
+      currentX = parseFloat(matrixValues[4]);
+    }
+    const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
+
+    selectedUpdate();
+    sliderContainer.style.transform = `translateX(${
+      initialPosition - currentIndex * slideWidth
+    }px)`;
   }
 
-  totalPages = totalWeeks;
-  moveToPage(0); // 초기 위치
-}
+  function initialSliderPosition() {
+    console.log(sliderContainer.clientWidth);
+    sliderContainer.style.transform = `translateX(${
+      sliderContainer.clientWidth / 2 - slideWidth / 2
+    }px)`;
+  }
 
-function moveToPage(page) {
-  if (page < 0 || page >= totalPages) return;
-  currentPage = page;
-  const offset = -100 * page;
-  calendarSlider.style.transform = `translateX(${offset}%)`;
+  function selectedUpdate() {
+    const slides = document.querySelectorAll(".item-wrapper");
 
-  // 첫 날짜 자동 선택
-  const firstDay = calendarSlider.children[page].querySelector(".calendar-day");
-  document
-    .querySelectorAll(".calendar-day")
-    .forEach((el) => el.classList.remove("selected"));
-  firstDay.classList.add("selected");
-}
+    slides.forEach((slide) => slide.classList.remove("selected"));
 
-prevBtn.addEventListener("click", () => moveToPage(currentPage - 1));
-nextBtn.addEventListener("click", () => moveToPage(currentPage + 1));
+    if (currentIndex >= slides.length) {
+      currentIndex = slides.length - 1;
+    }
+    slides[currentIndex].classList.add("selected");
+  }
 
-generateCalendarPages(new Date());
+  // 초기 슬라이더 위치 설정 (첫 슬라이드를 중앙에 위치)
+  initialSliderPosition();
+
+  // 이전 버튼 클릭 시
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      slideUpdate(0);
+    }
+  });
+
+  // 다음 버튼 클릭 시
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < totalSlides - 1) {
+      currentIndex++;
+      slideUpdate(1);
+    }
+  });
+
+  // 창 크기 변화 시 재계산 (반응형 대응)
+  window.addEventListener("resize", () => {
+    initialSliderPosition();
+    currentIndex = 0;
+    selectedUpdate();
+  });
+});
