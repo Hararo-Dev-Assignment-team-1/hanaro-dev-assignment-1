@@ -44,10 +44,10 @@ const sliderData = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sliderWrapper = document.querySelector(".item-slider-wrapper");
   const sliderContainer = document.querySelector(".slider-container");
   const prevBtn = document.getElementById("sliderPrevBtn");
   const nextBtn = document.getElementById("sliderNextBtn");
+  const sliderDots = document.getElementById("sliderDots");
 
   sliderData.forEach((item, index) => {
     const slide = document.createElement("div");
@@ -95,7 +95,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const slideWidth = slides[0].offsetWidth + slideMarginRight;
 
   let currentIndex = 0;
-  function slideUpdate(dir) {
+
+  function createDots() {
+    // dot 컨테이너 초기화
+    sliderDots.innerHTML = "";
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      // 현재 선택된 슬라이드와 일치하면 active 클래스 추가
+      if (i === currentIndex) {
+        dot.classList.add("active");
+      }
+      // dot 클릭 시, dot의 index 값으로 슬라이드를 이동할 수 있도록 data-index 설정
+      dot.dataset.index = i;
+      dot.addEventListener("click", () => {
+        // 외부에서 currentIndex 업데이트와 슬라이더 이동 처리 함수를 호출하도록 연결
+        currentIndex = Number(dot.dataset.index);
+        slideUpdate(); // 슬라이더 이동 함수 (외부 구현)
+        updateDots(currentIndex, sliderDots);
+      });
+      sliderDots.appendChild(dot);
+    }
+  }
+  function updateDots() {
+    const dots = document.querySelectorAll(".slider-dots .dot");
+    dots.forEach((dot, idx) => {
+      if (idx === currentIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  // 슬라이드 이동 함수
+  function slideUpdate() {
     const computedStyle = window.getComputedStyle(sliderContainer);
     const transform = computedStyle.getPropertyValue("transform");
 
@@ -105,6 +139,18 @@ document.addEventListener("DOMContentLoaded", () => {
       currentX = parseFloat(matrixValues[4]);
     }
     const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
+
+    // 버튼 visibility 처리
+    if (currentIndex == 0) {
+      prevBtn.style.visibility = "hidden";
+    } else {
+      prevBtn.style.visibility = "visible";
+    }
+    if (currentIndex == sliderData.length - 1) {
+      nextBtn.style.visibility = "hidden";
+    } else {
+      nextBtn.style.visibility = "visible";
+    }
 
     selectedUpdate();
     sliderContainer.style.transform = `translateX(${
@@ -131,13 +177,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 초기 슬라이더 위치 설정 (첫 슬라이드를 중앙에 위치)
-  initialSliderPosition();
+  slideUpdate();
+  createDots();
 
   // 이전 버튼 클릭 시
   prevBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
-      slideUpdate(0);
+      slideUpdate();
+      updateDots();
     }
   });
 
@@ -145,14 +193,17 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.addEventListener("click", () => {
     if (currentIndex < totalSlides - 1) {
       currentIndex++;
-      slideUpdate(1);
+      slideUpdate();
+      updateDots();
     }
   });
 
   // 창 크기 변화 시 재계산 (반응형 대응)
   window.addEventListener("resize", () => {
-    initialSliderPosition();
+    // initialSliderPosition();
+    slideUpdate();
     currentIndex = 0;
     selectedUpdate();
+    updateDots();
   });
 });
