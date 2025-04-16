@@ -1,6 +1,6 @@
 // calendar.js
 import { sliderData } from "./sliderData.js";
-import { updateEventSlider, slideUpdate } from "./slider.js";
+import { updateEventSlider } from "./slider.js";
 const calendarHeader = document.getElementById("calendarHeader");
 const yearMonth = document.getElementById("yearMonth");
 const prevBtn = document.getElementById("prevBtn");

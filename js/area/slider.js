@@ -14,6 +14,11 @@ window.openKakaoMap = function (address) {
 export function slideUpdate() {
   const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
 
+  if (sliderData.length === 0) {
+    sliderContainer.style.transform = `translateX(${initialPosition}px)`;
+    return;
+  }
+
   // 버튼 visibility 처리
   if (currentIndex === 0) {
     prevBtn.style.visibility = "hidden";
@@ -27,6 +32,7 @@ export function slideUpdate() {
   }
 
   selectedUpdate();
+  sliderContainer.style.transition = "none";
   sliderContainer.style.transform = `translateX(${
     initialPosition - currentIndex * slideWidth
   }px)`;
@@ -61,6 +67,10 @@ function updateDots() {
     }
   });
 }
+function hideBtn() {
+  nextBtn = document.getElementById("sliderNextBtn");
+  nextBtn.style.visibility = "hidden";
+}
 
 function selectedUpdate() {
   const slides = document.querySelectorAll(".item-wrapper");
@@ -73,6 +83,19 @@ function selectedUpdate() {
 export function updateEventSlider(filteredEvents) {
   sliderContainer.innerHTML = "";
   sliderDots.innerHTML = "";
+
+  if (filteredEvents.length === 0) {
+    sliderContainer.style.transition = "none";
+    const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
+    sliderContainer.style.transform = `translateX(${initialPosition}px)`;
+    hideBtn();
+    sliderContainer.innerHTML = `
+      <div class="no-events-message">
+        선택한 날짜에는 등록된 행사가 없습니다.
+      </div>
+    `;
+    return;
+  }
 
   filteredEvents.forEach((item, index) => {
     const slide = document.createElement("div");
@@ -122,8 +145,8 @@ export function updateEventSlider(filteredEvents) {
     slideWidth = slides[0].offsetWidth + slideMarginRight;
   }
   currentIndex = 0;
-  createDots();
   slideUpdate();
+  createDots();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -131,6 +154,19 @@ document.addEventListener("DOMContentLoaded", () => {
   prevBtn = document.getElementById("sliderPrevBtn");
   nextBtn = document.getElementById("sliderNextBtn");
   sliderDots = document.getElementById("sliderDots");
+
+  if (sliderData.length === 0) {
+    sliderContainer.style.transition = "none";
+    const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
+    sliderContainer.style.transform = `translateX(${initialPosition}px)`;
+    hideBtn();
+    sliderContainer.innerHTML = `
+      <div class="no-events-message">
+        선택한 날짜에는 등록된 행사가 없습니다.
+      </div>
+    `;
+    return;
+  }
 
   sliderData.forEach((item, index) => {
     const slide = document.createElement("div");
