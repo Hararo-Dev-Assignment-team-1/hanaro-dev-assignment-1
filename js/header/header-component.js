@@ -77,7 +77,6 @@ class HeaderComponent extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
-    console.log("template : ", template.content);
     shadow.appendChild(template.content.cloneNode(true));
   }
 }
