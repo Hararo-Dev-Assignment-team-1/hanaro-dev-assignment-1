@@ -5,15 +5,13 @@ let currentIndex = 0;
 let totalSlides = 0;
 let slideWidth = 0;
 
-export function slideUpdate() {
-  const computedStyle = window.getComputedStyle(sliderContainer);
-  const transform = computedStyle.getPropertyValue("transform");
+window.openKakaoMap = function (address) {
+  const encodedAddress = encodeURIComponent(address);
+  const url = `https://map.kakao.com/?q=${encodedAddress}`;
+  window.open(url, "_blank");
+};
 
-  let currentX = 0;
-  if (transform && transform !== "none") {
-    const matrixValues = transform.match(/matrix.*\((.+)\)/)[1].split(", ");
-    currentX = parseFloat(matrixValues[4]);
-  }
+export function slideUpdate() {
   const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
 
   // 버튼 visibility 처리
@@ -103,8 +101,12 @@ export function updateEventSlider(filteredEvents) {
             </div>
           </div>
           <div class="btn-wrapper">
-            <div class="site">바로가기</div>
-            <div class="road">길찾기</div>
+            <div class="site" onclick="window.open('${
+              item.link
+            }', '_blank')">바로가기</div>
+            <div class="road" onclick="openKakaoMap('${
+              item.place
+            }')">길찾기</div>
           </div>
         </div>
       </div>
@@ -154,8 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <div class="btn-wrapper">
-            <div class="site">바로가기</div>
-            <div class="road">길찾기</div>
+            <div class="site" onclick="window.open('${
+              item.link
+            }', '_blank')">바로가기</div>
+            <div class="road" onclick="openKakaoMap('${
+              item.place
+            }')">길찾기</div>
           </div>
         </div>
       </div>

@@ -223,6 +223,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 1 ~ 2025. 4. 3",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -230,6 +231,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 1 ~ 2025. 4. 3",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -237,6 +239,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 1 ~ 2025. 4. 3",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -244,6 +247,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 4 ~ 2025. 4. 6",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -251,6 +255,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 4 ~ 2025. 4. 6",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -258,6 +263,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 4 ~ 2025. 4. 6",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -265,6 +271,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 4 ~ 2025. 4. 6",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -272,6 +279,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 7 ~ 2025. 4. 9",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -279,6 +287,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 7 ~ 2025. 4. 9",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -286,6 +295,15 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 7 ~ 2025. 4. 9",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-1.jpg",
+    title: "(4월) - 3 행사",
+    location: "서울 서초구",
+    period: "2025. 4. 7 ~ 2025. 4. 9",
+    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -293,6 +311,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 10 ~ 2025. 4. 12",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -300,6 +319,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 10 ~ 2025. 4. 12",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -307,13 +327,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 10 ~ 2025. 4. 12",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
-  },
-  {
-    img: "../img/area/slider/slider-1.jpg",
-    title: "(4월) - 4 행사",
-    location: "서울 서초구",
-    period: "2025. 4. 10 ~ 2025. 4. 12",
-    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -321,6 +335,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 13 ~ 2025. 4. 15",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -328,6 +343,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 13 ~ 2025. 4. 15",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -335,13 +351,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 13 ~ 2025. 4. 15",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
-  },
-  {
-    img: "../img/area/slider/slider-1.jpg",
-    title: "(4월) - 5 행사",
-    location: "서울 서초구",
-    period: "2025. 4. 13 ~ 2025. 4. 15",
-    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -349,6 +359,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 16 ~ 2025. 4. 18",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -356,6 +367,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 16 ~ 2025. 4. 18",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -363,13 +375,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 16 ~ 2025. 4. 18",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
-  },
-  {
-    img: "../img/area/slider/slider-1.jpg",
-    title: "(4월) - 6 행사",
-    location: "서울 서초구",
-    period: "2025. 4. 16 ~ 2025. 4. 18",
-    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -377,6 +383,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 19 ~ 2025. 4. 21",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -384,6 +391,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 19 ~ 2025. 4. 21",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -391,6 +399,15 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 19 ~ 2025. 4. 21",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-1.jpg",
+    title: "(4월) - 7 행사",
+    location: "서울 서초구",
+    period: "2025. 4. 19 ~ 2025. 4. 21",
+    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -398,6 +415,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 22 ~ 2025. 4. 24",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -405,6 +423,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 22 ~ 2025. 4. 24",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -412,6 +431,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 22 ~ 2025. 4. 24",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -419,6 +439,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 25 ~ 2025. 4. 27",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -426,6 +447,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 25 ~ 2025. 4. 27",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -433,6 +455,15 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 25 ~ 2025. 4. 27",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-1.jpg",
+    title: "(4월) - 9 행사",
+    location: "서울 서초구",
+    period: "2025. 4. 25 ~ 2025. 4. 27",
+    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -440,6 +471,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 28 ~ 2025. 4. 30",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -447,6 +479,7 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 28 ~ 2025. 4. 30",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-1.jpg",
@@ -454,6 +487,15 @@ export const sliderData = [
     location: "서울 서초구",
     period: "2025. 4. 28 ~ 2025. 4. 30",
     place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-1.jpg",
+    title: "(4월) - 10 행사",
+    location: "서울 서초구",
+    period: "2025. 4. 28 ~ 2025. 4. 30",
+    place: "서울특별시 서대문구 통일로 279-24 (현저동)",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -461,6 +503,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 1 ~ 2025. 5. 3",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -468,6 +511,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 1 ~ 2025. 5. 3",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -475,13 +519,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 1 ~ 2025. 5. 3",
     place: "서울특별시 강남구 테헤란로 123",
-  },
-  {
-    img: "../img/area/slider/slider-2.jpg",
-    title: "(5월) - 1 행사",
-    location: "서울 강남구",
-    period: "2025. 5. 1 ~ 2025. 5. 3",
-    place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -489,6 +527,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 4 ~ 2025. 5. 6",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -496,6 +535,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 4 ~ 2025. 5. 6",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -503,13 +543,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 4 ~ 2025. 5. 6",
     place: "서울특별시 강남구 테헤란로 123",
-  },
-  {
-    img: "../img/area/slider/slider-2.jpg",
-    title: "(5월) - 2 행사",
-    location: "서울 강남구",
-    period: "2025. 5. 4 ~ 2025. 5. 6",
-    place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -517,6 +551,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 7 ~ 2025. 5. 9",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -524,6 +559,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 7 ~ 2025. 5. 9",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -531,6 +567,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 7 ~ 2025. 5. 9",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -538,6 +575,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 10 ~ 2025. 5. 12",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -545,6 +583,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 10 ~ 2025. 5. 12",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -552,6 +591,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 10 ~ 2025. 5. 12",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -559,6 +599,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 13 ~ 2025. 5. 15",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -566,6 +607,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 13 ~ 2025. 5. 15",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -573,6 +615,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 13 ~ 2025. 5. 15",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -580,6 +623,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 16 ~ 2025. 5. 18",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -587,6 +631,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 16 ~ 2025. 5. 18",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -594,6 +639,15 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 16 ~ 2025. 5. 18",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-2.jpg",
+    title: "(5월) - 6 행사",
+    location: "서울 강남구",
+    period: "2025. 5. 16 ~ 2025. 5. 18",
+    place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -601,6 +655,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 19 ~ 2025. 5. 21",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -608,6 +663,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 19 ~ 2025. 5. 21",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -615,6 +671,15 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 19 ~ 2025. 5. 21",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-2.jpg",
+    title: "(5월) - 7 행사",
+    location: "서울 강남구",
+    period: "2025. 5. 19 ~ 2025. 5. 21",
+    place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -622,6 +687,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 22 ~ 2025. 5. 24",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -629,6 +695,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 22 ~ 2025. 5. 24",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -636,6 +703,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 22 ~ 2025. 5. 24",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -643,6 +711,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 25 ~ 2025. 5. 27",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -650,6 +719,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 25 ~ 2025. 5. 27",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -657,13 +727,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 25 ~ 2025. 5. 27",
     place: "서울특별시 강남구 테헤란로 123",
-  },
-  {
-    img: "../img/area/slider/slider-2.jpg",
-    title: "(5월) - 9 행사",
-    location: "서울 강남구",
-    period: "2025. 5. 25 ~ 2025. 5. 27",
-    place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -671,6 +735,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 28 ~ 2025. 5. 30",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -678,6 +743,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 28 ~ 2025. 5. 30",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-2.jpg",
@@ -685,6 +751,7 @@ export const sliderData = [
     location: "서울 강남구",
     period: "2025. 5. 28 ~ 2025. 5. 30",
     place: "서울특별시 강남구 테헤란로 123",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -692,6 +759,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 1 ~ 2025. 6. 3",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -699,6 +767,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 1 ~ 2025. 6. 3",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -706,13 +775,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 1 ~ 2025. 6. 3",
     place: "서울특별시 종로구 세종대로 110",
-  },
-  {
-    img: "../img/area/slider/slider-3.jpg",
-    title: "(6월) - 1 행사",
-    location: "서울 종로구",
-    period: "2025. 6. 1 ~ 2025. 6. 3",
-    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -720,6 +783,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 4 ~ 2025. 6. 6",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -727,6 +791,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 4 ~ 2025. 6. 6",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -734,6 +799,15 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 4 ~ 2025. 6. 6",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "(6월) - 2 행사",
+    location: "서울 종로구",
+    period: "2025. 6. 4 ~ 2025. 6. 6",
+    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -741,6 +815,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 7 ~ 2025. 6. 9",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -748,6 +823,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 7 ~ 2025. 6. 9",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -755,6 +831,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 7 ~ 2025. 6. 9",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -762,6 +839,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 7 ~ 2025. 6. 9",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -769,6 +847,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 10 ~ 2025. 6. 12",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -776,6 +855,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 10 ~ 2025. 6. 12",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -783,6 +863,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 10 ~ 2025. 6. 12",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -790,6 +871,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 13 ~ 2025. 6. 15",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -797,6 +879,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 13 ~ 2025. 6. 15",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -804,6 +887,15 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 13 ~ 2025. 6. 15",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "(6월) - 5 행사",
+    location: "서울 종로구",
+    period: "2025. 6. 13 ~ 2025. 6. 15",
+    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -811,6 +903,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 16 ~ 2025. 6. 18",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -818,6 +911,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 16 ~ 2025. 6. 18",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -825,6 +919,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 16 ~ 2025. 6. 18",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -832,6 +927,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 16 ~ 2025. 6. 18",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -839,6 +935,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 19 ~ 2025. 6. 21",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -846,6 +943,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 19 ~ 2025. 6. 21",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -853,6 +951,15 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 19 ~ 2025. 6. 21",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "(6월) - 7 행사",
+    location: "서울 종로구",
+    period: "2025. 6. 19 ~ 2025. 6. 21",
+    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -860,6 +967,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 22 ~ 2025. 6. 24",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -867,6 +975,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 22 ~ 2025. 6. 24",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -874,6 +983,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 22 ~ 2025. 6. 24",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -881,6 +991,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 25 ~ 2025. 6. 27",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -888,6 +999,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 25 ~ 2025. 6. 27",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -895,13 +1007,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 25 ~ 2025. 6. 27",
     place: "서울특별시 종로구 세종대로 110",
-  },
-  {
-    img: "../img/area/slider/slider-3.jpg",
-    title: "(6월) - 9 행사",
-    location: "서울 종로구",
-    period: "2025. 6. 25 ~ 2025. 6. 27",
-    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -909,6 +1015,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 28 ~ 2025. 6. 30",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -916,6 +1023,7 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 28 ~ 2025. 6. 30",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
   {
     img: "../img/area/slider/slider-3.jpg",
@@ -923,5 +1031,14 @@ export const sliderData = [
     location: "서울 종로구",
     period: "2025. 6. 28 ~ 2025. 6. 30",
     place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
+  },
+  {
+    img: "../img/area/slider/slider-3.jpg",
+    title: "(6월) - 10 행사",
+    location: "서울 종로구",
+    period: "2025. 6. 28 ~ 2025. 6. 30",
+    place: "서울특별시 종로구 세종대로 110",
+    link: "https://github.com/vargun",
   },
 ];
