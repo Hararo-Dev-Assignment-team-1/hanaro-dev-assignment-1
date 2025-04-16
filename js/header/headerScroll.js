@@ -1,4 +1,4 @@
-// js/header/header-scroll.js
+// js/header/headerScroll.js
 document.addEventListener("DOMContentLoaded", () => {
   const headerWrapper =
     document

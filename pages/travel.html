@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/travel/index.css" />
+    <link rel="stylesheet" href="/css/travel/sub.css" />
+
+    <script type="module" src="../js/header/headerComponent.js"></script>
+    <link rel="stylesheet" href="/css/header/index.css" />
+    <script type="module" src="../js/header/headerScroll.js"></script>
+    <script type="module" src="../js/travel/pagination.js"></script>
+    <script type="module" src="../js/travel/filtering.js"></script>
+  </head>
+  <body>
+    <header-component></header-component>
+    <div class="main-container">
+      <div class="main-section-title">
+        <div>
+          <img src="../img/travel/chat.svg" />
+          여행지
+        </div>
+        <span>#전체</span>
+      </div>
+      <div class="main-wrapper">
+        <div class="main-section">
+          <div class="main-section-content">
+            <div class="content-title">
+              <pre>총 <span style="color: #0a97cd">2,265</span>건</pre>
+              <div class="ordering-wrapper">
+                <span>최신순</span>
+                <div class="divider"></div>
+                <span>거리순</span>
+                <div class="divider"></div>
+                <span>인기순</span>
+                <img src="../img/travel/annotation.svg" />
+              </div>
+            </div>
+            <!-- <div class="main-item-list"></div>
+            여기에만 JS로 아이템 렌더링 -->
+          </div>
+        </div>
+        <div class="sub-section">
+          <div class="sub-section-title">
+            <img id="resetBtn" src="../img/travel/reset.svg" />
+          </div>
+          <div class="hashtag-container" data-type="region">지역 필터</div>
+          <div class="hashtag-container" data-type="city">도시 필터</div>
+          <div class="hashtag-container-free" data-type="tag">태그 필터</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

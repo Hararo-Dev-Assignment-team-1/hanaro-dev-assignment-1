@@ -1,4 +1,4 @@
-// js/components/header-component.js
+// js/components/headerComponent.js
 
 const template = document.createElement("template");
 
