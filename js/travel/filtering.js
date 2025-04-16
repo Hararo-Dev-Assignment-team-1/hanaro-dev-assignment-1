@@ -6,16 +6,15 @@ import { renderPaginatedItems, setFilteredData } from "./pagination.js";
 const filterState = {
   region: "#전체",
   city: "#전체",
-  tag: "#전체",
-  sortBy: "latest", // "latest", "distance", "popularity"
+  tag: ["#전체"],
+  sortBy: "latest",
 };
 
-// 필터별 버튼 컨테이너
 const regionContainer = document.querySelector('[data-type="region"]');
 const cityContainer = document.querySelector('[data-type="city"]');
 const tagContainer = document.querySelector('[data-type="tag"]');
 const resetBtn = document.getElementById("resetBtn");
-// 동적으로 cityMap 생성
+
 const cityMap = travelData.reduce((map, item) => {
   const regionKey = `#${item.region}`;
   const cityKey = `#${item.city}`;
@@ -24,7 +23,6 @@ const cityMap = travelData.reduce((map, item) => {
   return map;
 }, {});
 
-// Set -> Array 변환
 Object.keys(cityMap).forEach((region) => {
   cityMap[region] = Array.from(cityMap[region]);
 });
@@ -48,33 +46,56 @@ function resetFilters() {
 }
 
 function createButtons(container, items, type) {
-  cityContainer.style.display = "none !important"; // 처음엔 아예 숨기기
-
+  if (type === "city") cityContainer.style.display = "none !important";
   container.innerHTML = "";
+
   items.forEach((label) => {
     const btn = document.createElement("button");
     btn.className = "hashtag-button";
     btn.textContent = label;
-    if (filterState[type] === label) btn.classList.add("active");
+
+    if (type === "tag" && filterState.tag.includes(label)) {
+      btn.classList.add("active");
+    } else if (filterState[type] === label) {
+      btn.classList.add("active");
+    }
 
     btn.addEventListener("click", () => {
-      filterState[type] = label;
-      container
-        .querySelectorAll(".hashtag-button")
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      if (type === "region") {
-        filterState.city = "#전체";
-        const cities = cityMap[label];
-        console.log("cities : ", cities);
-
-        if (cities) {
-          cityContainer.style.display = "grid";
-          createButtons(cityContainer, ["#전체", ...cities], "city");
+      if (type === "tag") {
+        // 다중 선택 처리
+        if (label === "#전체") {
+          filterState.tag = ["#전체"];
         } else {
-          cityContainer.style.display = "none";
-          cityContainer.innerHTML = ""; // 버튼도 제거
+          filterState.tag = filterState.tag.filter((t) => t !== "#전체");
+          const index = filterState.tag.indexOf(label);
+          if (index > -1) {
+            filterState.tag.splice(index, 1); // 선택 해제
+          } else {
+            filterState.tag.push(label); // 선택 추가
+          }
+
+          if (filterState.tag.length === 0) {
+            filterState.tag = ["#전체"];
+          }
+        }
+        createButtons(container, items, type);
+      } else {
+        filterState[type] = label;
+        container
+          .querySelectorAll(".hashtag-button")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        if (type === "region") {
+          filterState.city = "#전체";
+          const cities = cityMap[label];
+          if (cities) {
+            cityContainer.style.display = "grid";
+            createButtons(cityContainer, ["#전체", ...cities], "city");
+          } else {
+            cityContainer.style.display = "none";
+            cityContainer.innerHTML = "";
+          }
         }
       }
 
@@ -92,8 +113,7 @@ function applyFilters() {
     filtered = filtered.filter(
       (item) => `#${item.region}` === filterState.region
     );
-  } else if (filterState.region == "#전체") {
-    console.log(`filterState.region == "#전체"`);
+  } else if (filterState.region === "#전체") {
     cityContainer.style.display = "none !important";
   }
 
@@ -101,11 +121,13 @@ function applyFilters() {
     filtered = filtered.filter((item) => `#${item.city}` === filterState.city);
   }
 
-  if (filterState.tag !== "#전체") {
+  if (!filterState.tag.includes("#전체")) {
     filtered = filtered.filter((item) =>
-      item.hashtags.includes(filterState.tag)
+      filterState.tag.some((t) => item.hashtags.includes(t))
     );
   }
+
+  // 정렬 처리
   if (filterState.sortBy === "latest") {
     filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
   } else if (filterState.sortBy === "distance") {
@@ -168,6 +190,6 @@ sortButtons.forEach((btn) => {
 document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = document.querySelector(".sub-section-title img");
   if (resetBtn) {
-    resetBtn.addEventListener("click", resetFilters); // 함수 참조만 넘긴다
+    resetBtn.addEventListener("click", resetFilters);
   }
 });
