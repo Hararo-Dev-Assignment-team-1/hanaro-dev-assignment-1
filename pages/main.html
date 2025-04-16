@@ -1,0 +1,54 @@
+<!-- 메인 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인 슬라이더 페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main/base.css">
+    <link rel="stylesheet" href="../css/main/slider.css">
+    <link rel="stylesheet" href="../css/main/progressbar.css">
+    <link rel="stylesheet" href="../css/main/controls.css">
+
+</head>
+
+<body>
+    <div class="slider-container">
+        <!-- 단일 배경 슬라이더 -->
+        <div class="bg-slider"></div>
+
+        <!-- 텍스트 -->
+        <div class="text-slider">
+            <ul class="text-wrapper"></ul>
+        </div>
+
+        <!-- 이미지 -->
+        <div class="image-slider">
+            <ul class="image-wrapper"></ul>
+        </div>
+
+        <!-- 컨트롤 -->
+        <div class="controls">
+            <div class="page-indicator">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="indicator">1 / 8</span>
+            </div>
+            <div class="nav-buttons">
+                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="playPause">
+                    <img src="../img/main/pause.png" class="pause-icon" alt="정지 아이콘">
+                    <img src="../img/main/play.png" class="play-icon" alt="재생 아이콘" style="display: none;">
+                </button>
+                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+
+            </div>
+        </div>
+
+        <script type="module" src="../js/main/main.js"></script>
+</body>
+
+</html>
