@@ -1,0 +1,63 @@
+<!-- 지역 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/area/calendar.css" />
+    <link rel="stylesheet" href="../css/area/content.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- calendar header -->
+      <div class="title-wrapper">
+        <div class="title">
+          <p><b>전국</b> 축제·행사 어디까지 가봤니?</p>
+          <img src="../img/area/plus-btn.png" />
+        </div>
+
+        <div class="calendar-title">
+          <div class="year-month" id="yearMonth">2025.04</div>
+          <div class="middle-line"></div>
+        </div>
+        <div class="calendar-header-wrapper">
+          <img
+            src="../img/area/circle-left.svg"
+            class="nav-button prev-btn"
+            id="prevBtn"
+          />
+          <div class="calendar-header" id="calendarHeader"></div>
+          <img
+            src="../img/area/circle-right.svg"
+            class="nav-button next-btn"
+            id="nextBtn"
+          />
+        </div>
+        <script type="module" src="../js/area/calendar.js"></script>
+      </div>
+      <script type="module" src="../js/area/sliderData.js" defer></script>
+
+      <!-- 슬라이더 -->
+      <div class="item-slider-wrapper">
+        <div class="slider-container"></div>
+      </div>
+
+      <div class="slider-btn-wrapper">
+        <img
+          src="../img/area/circle-left.svg"
+          class="slider-nav-btn prev-btn"
+          id="sliderPrevBtn"
+        />
+        <div class="slider-dots" id="sliderDots"></div>
+
+        <img
+          src="../img/area/circle-right.svg"
+          class="slider-nav-btn next-btn"
+          id="sliderNextBtn"
+        />
+      </div>
+      <script type="module" src="../js/area/slider.js"></script>
+    </div>
+  </body>
+</html>
