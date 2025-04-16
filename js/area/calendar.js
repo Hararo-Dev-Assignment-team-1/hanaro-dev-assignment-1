@@ -1,6 +1,6 @@
 // calendar.js
 import { sliderData } from "./sliderData.js";
-import { updateEventSlider, slideUpdate } from "./slider.js";
+import { updateEventSlider } from "./slider.js";
 const calendarHeader = document.getElementById("calendarHeader");
 const yearMonth = document.getElementById("yearMonth");
 const prevBtn = document.getElementById("prevBtn");
@@ -88,6 +88,18 @@ function updateSliderFromCalendar() {
 function updateCalendar(weekPage) {
   const newStartDate = new Date(baseDate);
   newStartDate.setDate(baseDate.getDate() + weekPage * 14);
+
+  // 3개월 제한 범위 확인
+  const now = new Date();
+  const minDate = new Date(now.getFullYear(), now.getMonth() - 3, 1);
+  const maxDate = new Date(now.getFullYear(), now.getMonth() + 3 + 1, 0); // 다음달 0일 = 그달 마지막 날
+
+  // newStartDate가 범위를 벗어나면 중단
+  if (newStartDate < minDate || newStartDate > maxDate) {
+    alert("당월 기준 이전/이후 3개월 이내의 정보만 확인하실 수 있습니다.");
+    return false;
+  }
+
   createCalendar(newStartDate);
   page = weekPage;
   updateSliderFromCalendar();
@@ -113,12 +125,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
   prevBtn.addEventListener("click", () => {
     page--;
-    updateCalendar(page);
+    if (updateCalendar(page) == false) {
+      // 페이지 원복 필요
+      page++;
+    }
   });
 
   nextBtn.addEventListener("click", () => {
     page++;
-    updateCalendar(page);
+    if (updateCalendar(page) == false) {
+      page--;
+    }
   });
 });
 
