@@ -1,0 +1,63 @@
+.sub-section {
+  width: 400px;
+  min-width: 400px;
+  flex-shrink: 0;
+  background-color: #f7f7f7;
+  flex-direction: column;
+  padding: 20px;
+  height: fit-content;
+}
+.sub-section > div {
+  display: grid;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.sub-section-title {
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.sub-item-wrapper {
+  flex-direction: column;
+}
+
+.hashtag-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4개씩 */
+  gap: 12px 16px; /* 세로, 가로 간격 */
+  padding: 12px;
+}
+
+.hashtag-button {
+  font-size: 14px;
+  color: #666;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hashtag-button.active {
+  color: #fff;
+  background-color: #57667e;
+  font-weight: 700;
+}
+
+.hashtag-container-free {
+  display: flex !important;
+  padding: 12px;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+.no-place-message {
+  justify-content: center;
+  padding: 40px;
+  font-size: 24px;
+}
+#resetBtn {
+  cursor: pointer;
+}
