@@ -6,6 +6,8 @@
 ![여행지 페이지](./img/homepage_2.png)
 
 
+
+
 ## 👥 팀원 소개
 
 | 이름 | 역할 |
@@ -14,10 +16,14 @@
 | 김유림 | 프론트엔드 개발 |
 
 
+
+
 ## 🛠 기술 스택
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Version Control**: Git & GitHub
+
+
 
 
 ## 🔀 Git 브랜치 전략
@@ -26,6 +32,8 @@
 - `develop`: 통합 개발 브랜치  
 - `이슈번호-작업내용`: 기능 단위 브랜치 (이슈 기반 브랜치)  
   - 예시: `9-footer-개발` ← `#9 Footer 개발` 이슈 기반
+
+
 
 
 ## 💡 Git 협업 컨벤션
@@ -46,12 +54,16 @@
   - `docs`: 문서 수정
   - `chore`: 설정, 환경 등 기타 작업
 
+
+
 - **Pull Request 작성**
   - 제목: 형식 제한 없음
   - 대상 브랜치: `develop`  
   - Reviewer 지정 필수  
   - Self-Merge 금지  
   - 충돌 발생 시 작성자가 직접 해결
+
+
 
 
 ## 📁 폴더 구조
