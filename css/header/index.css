@@ -84,7 +84,15 @@ header img {
   font-weight: 600;
 }
 
+.title-item.selected .header-title-wrapper span {
+  font-weight: 600;
+}
+
 .title-item:hover .title-dot {
+  display: block;
+}
+
+.title-item.selected .title-dot {
   display: block;
 }
 
