@@ -4,9 +4,9 @@ const template = document.createElement("template");
 
 template.innerHTML = `
   <link rel="stylesheet" href="/css/header/index.css" />
-  <header>
+  <header class="main-header">
       <div class="header-wrapper">
-        <img src="../img/logo.svg" />
+        <img class="logo-btn" src="../img/logo.svg" />
         <div class="header-title">
           <div class="title-item selected">
             <div class="header-title-wrapper">
@@ -78,13 +78,26 @@ class HeaderComponent extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
     shadow.appendChild(template.content.cloneNode(true));
+    const logoBtn = shadow.querySelector(".logo-btn");
 
     const path = window.location.pathname;
 
     const titleItems = shadow.querySelectorAll(".title-item");
+    const searchBtn = shadow.querySelector('img[src$="search-md.svg"]');
+    searchBtn.addEventListener("click", () => {
+      const searchHeader = document.querySelector("search-header");
+      if (searchHeader) {
+        searchHeader.style.display = "block";
+      }
+      this.closest("header-component").style.display = "none";
+    });
+
+    logoBtn.addEventListener("click", () => {
+      location.href = "/pages/main.html";
+    });
 
     titleItems.forEach((item) => {
-      item.classList.remove("selected"); // ✅ 먼저 초기화
+      item.classList.remove("selected");
       const label = item.querySelector("span")?.textContent?.trim();
       const subItems = item.querySelectorAll(".sub-item-wrapper span");
 
