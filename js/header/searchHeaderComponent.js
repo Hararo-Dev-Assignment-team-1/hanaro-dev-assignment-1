@@ -1,7 +1,7 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-  <link rel="stylesheet" href="/css/header/search.css" />
+  <link rel="stylesheet" href="../css/header/search.css" />
   <header class="search-header">
     <div class="header-search-container">
       <div class="header-search-wrapper-title">

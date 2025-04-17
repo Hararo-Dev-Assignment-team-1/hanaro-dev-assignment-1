@@ -3,7 +3,7 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-  <link rel="stylesheet" href="/css/header/index.css" />
+  <link rel="stylesheet" href="../css/header/index.css" />
   <header class="main-header">
       <div class="header-wrapper">
         <img src="../img/logo.svg" />
