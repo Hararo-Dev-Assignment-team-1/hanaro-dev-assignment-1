@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/travel/index.css" />
-    <link rel="stylesheet" href="/css/travel/sub.css" />
 
-    <script type="module" src="../js/travel/pagination.js"></script>
-    <script type="module" src="../js/travel/filtering.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/travel/index.css" />
+  <link rel="stylesheet" href="../css/travel/sub.css" />
 
-    <!-- header -->
-    <link rel="stylesheet" href="/css/header/index.css" />
-    <link rel="stylesheet" href="/css/header/search.css" />
-    <script type="module" src="../js/header/searchHeaderComponent.js"></script>
-    <script type="module" src="../js/header/headerComponent.js"></script>
-    <script type="module" src="../js/header/headerScroll.js"></script>
-  </head>
-  <body>
+  <script type="module" src="../js/travel/pagination.js"></script>
+  <script type="module" src="../js/travel/filtering.js"></script>
+
+  <!-- header -->
+  <link rel="stylesheet" href="../css/header/index.css" />
+  <link rel="stylesheet" href="../css/header/search.css" />
+  <script type="module" src="../js/header/searchHeaderComponent.js"></script>
+  <script type="module" src="../js/header/headerComponent.js"></script>
+  <script type="module" src="../js/header/headerScroll.js"></script>
+
+  <!-- footer -->
+  <script type="module" src="../js/footer/footer-component.js"></script>
+
+</head>
+
+<body>
+  <div class="page-wrapper">
     <header-component></header-component>
     <search-header style="display: none"></search-header>
 
@@ -51,8 +58,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="main-item-list"></div>
-            여기에만 JS로 아이템 렌더링 -->
           </div>
         </div>
         <div class="sub-section">
@@ -66,5 +71,8 @@
       </div>
     </div>
     <div class="travel-popup-overlay" id="travelPopupOverlay"></div>
-  </body>
+    <footer-component></footer-component>
+  </div>
+</body>
+
 </html>
