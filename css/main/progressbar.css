@@ -1,0 +1,42 @@
+/* 페이지 표시 (왼쪽) */
+.page-indicator {
+    display: flex;
+    /* 바와 숫자 가로 배치 */
+    align-items: center;
+    gap: 9px;
+    /* 바와 숫자 사이 간격 */
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+}
+
+#indicator {
+    font-weight: normal;
+    /* 전체는 기본 굵기 */
+}
+
+#indicator strong {
+    font-weight: bold;
+    /* 현재 페이지는 굵게 */
+}
+
+.progress-bar {
+    width: 160px;
+    height: 2px;
+    background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #777879;
+    width: 0%;
+    transition: width 0s linear;
+}
+
+.page-indicator span {
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+}

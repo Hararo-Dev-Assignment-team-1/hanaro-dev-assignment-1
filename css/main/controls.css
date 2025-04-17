@@ -1,0 +1,52 @@
+/* controls.css */
+/* 버튼 영역 */
+.controls {
+    position: absolute;
+    bottom: 13vh;
+    left: 28%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    /* 페이지 표시와 버튼 그룹 사이 간격 */
+    z-index: 10;
+}
+
+/* 버튼 그룹 (오른쪽) */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-buttons button {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    padding: 5px 5px;
+    border: none;
+    background: none;
+    color: rgb(110, 109, 109);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* #playPause img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+} */
+.play-icon {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+}
+
+.pause-icon {
+    width: 20px;
+    height: 20px;
+}
