@@ -216,7 +216,7 @@
 .popup-item img {
   width: 16px;
 }
-.popup-overlay {
+.travel-popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,7 +226,7 @@
   z-index: 98;
   display: none;
 }
-.popup-overlay.show {
+.travel-popup-overlay.show {
   display: block;
 }
 

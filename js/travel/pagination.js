@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("click", (e) => {
-    const overlay = document.getElementById("popupOverlay");
+    const overlay = document.getElementById("travelPopupOverlay");
 
     document.querySelectorAll(".popup").forEach((popup) => {
       popup.classList.remove("show");
@@ -207,10 +207,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("popupOverlay").addEventListener("click", () => {
-    document.querySelectorAll(".popup").forEach((popup) => {
-      popup.classList.remove("show");
+  document
+    .getElementById("travelPopupOverlay")
+    .addEventListener("click", () => {
+      document.querySelectorAll(".popup").forEach((popup) => {
+        popup.classList.remove("show");
+      });
+      document.getElementById("travelPopupOverlay").classList.remove("show");
     });
-    document.getElementById("popupOverlay").classList.remove("show");
-  });
 });
