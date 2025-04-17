@@ -235,6 +235,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // 드래그 이벤트
+  let startX = 0;
+  let isDragging = false;
+
+  // mousedown : 드래그 시작
+  sliderContainer.addEventListener("mousedown", (e) => {
+    startX = e.clientX;
+    isDragging = true;
+
+    // 슬라이드 현재 위치 저장
+    sliderContainer.style.transition = "none"; // 드래그 중 transition 제거
+  });
+
+  // mousemove : 드래그 중
+  sliderContainer.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - startX;
+    const currentTranslate =
+      sliderContainer.clientWidth / 2 -
+      slideWidth / 2 -
+      currentIndex * slideWidth;
+
+    // 슬라이더가 드래그에 따라 실시간으로 움직임
+    sliderContainer.style.transform = `translateX(${
+      currentTranslate + diff
+    }px)`;
+  });
+
+  // mouseup : 드래그 끝
+  sliderContainer.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    const endX = e.clientX;
+    const diff = endX - startX;
+
+    isDragging = false;
+    sliderContainer.style.transition = "transform 0.5s ease-in-out";
+
+    if (diff > 50 && currentIndex > 0) {
+      currentIndex--;
+    } else if (diff < -50 && currentIndex < totalSlides - 1) {
+      currentIndex++;
+    }
+
+    slideUpdate();
+    updateDots();
+  });
+
+  // 리사이즈 이벤트
   window.addEventListener("resize", () => {
     slideUpdate();
     currentIndex = 0;
