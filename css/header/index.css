@@ -14,7 +14,7 @@ body * {
   box-sizing: border-box !important;
 }
 
-header {
+.main-header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -27,15 +27,16 @@ header {
   z-index: 1000;
 }
 
-header:has(.header-wrapper:hover) {
+.main-header:has(.header-wrapper:hover) {
   height: 400px;
   background-color: #f4f6f8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header img {
+.main-header img {
   width: 200px;
   height: 40px;
+  cursor: pointer;
 }
 .header-wrapper {
   padding: 32px 20px;
@@ -65,10 +66,31 @@ header img {
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
+  position: relative;
 }
 .header-btn-wrapper img {
   width: 28px;
 }
+
+.language-wrapper {
+  width: 120px;
+  background-color: #fff;
+  padding: 12px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  top: 80px;
+  color: #686868;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.language-wrapper span:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+
 .title-item {
   display: flex;
   flex-direction: column;
@@ -110,33 +132,22 @@ header img {
   border-radius: 50%;
   display: none;
 }
-
 .sub-item-wrapper {
   width: 100%;
   position: absolute;
   top: 90px;
   left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 0 12px;
   color: #666;
   font-size: 16px;
   gap: 20px;
-  padding-left: 12px;
 }
 
-header:hover .sub-item-wrapper {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
 .sub-item-wrapper span:hover {
   font-weight: 600;
+
   color: black;
   text-decoration: underline;
 }
@@ -145,4 +156,16 @@ header:hover .sub-item-wrapper {
   font-weight: 600;
   color: black;
   text-decoration: underline;
+}
+.profile-popup {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 450px;
 }

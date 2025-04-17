@@ -4,7 +4,7 @@ const template = document.createElement("template");
 
 template.innerHTML = `
   <link rel="stylesheet" href="/css/header/index.css" />
-  <header>
+  <header class="main-header">
       <div class="header-wrapper">
         <img src="../img/logo.svg" />
         <div class="header-title">
@@ -68,6 +68,21 @@ template.innerHTML = `
           <img src="../img/header/user.svg" />
           <img src="../img/header/map.svg" />
           <img src="../img/header/globe.svg" />
+          <div class="language-wrapper">
+            <span>한국어</span>
+            <span>English</span>
+            <span>日本語</span>
+            <span>中文 ( 简体 )</span>
+            <span>中文 ( 繁體 )</span>
+            <span>Deutsch</span>
+            <span>Français</span>
+            <span>Español</span>
+            <span>Pусский</span>
+          </div>
+        </div>
+        <div class="profile-popup">
+        <div></div>
+
         </div>
       </div>
     </header>
@@ -79,12 +94,41 @@ class HeaderComponent extends HTMLElement {
     const shadow = this.attachShadow({ mode: "open" });
     shadow.appendChild(template.content.cloneNode(true));
 
+    // 로고 -> 홈 버튼
+    const logoBtn = shadow.querySelector('img[src$="logo.svg"]');
+
+    // 언어 버튼
+    const globeBtn = shadow.querySelector('img[src$="globe.svg"]');
+    const languageWrapper = shadow.querySelector(".language-wrapper");
+
+    languageWrapper.style.display = "none";
+
     const path = window.location.pathname;
 
     const titleItems = shadow.querySelectorAll(".title-item");
+    const searchBtn = shadow.querySelector('img[src$="search-md.svg"]');
+    searchBtn.addEventListener("click", () => {
+      const searchHeader = document.querySelector("search-header");
+      if (searchHeader) {
+        searchHeader.style.display = "block";
+      }
+      this.closest("header-component").style.display = "none";
+    });
+
+    // 홈 버튼 이동
+    logoBtn.addEventListener("click", () => {
+      location.href = "/pages/main.html";
+    });
+
+    // 언어 버튼
+    globeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isVisible = languageWrapper.style.display === "flex";
+      languageWrapper.style.display = isVisible ? "none" : "flex";
+    });
 
     titleItems.forEach((item) => {
-      item.classList.remove("selected"); // ✅ 먼저 초기화
+      item.classList.remove("selected");
       const label = item.querySelector("span")?.textContent?.trim();
       const subItems = item.querySelectorAll(".sub-item-wrapper span");
 
