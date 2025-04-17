@@ -6,6 +6,7 @@ template.innerHTML = `
   <link rel="stylesheet" href="/css/header/index.css" />
   <header class="main-header">
       <div class="header-wrapper">
+        <div class="popup-overlay"></div>
         <img src="../img/logo.svg" />
         <div class="header-title">
           <div class="title-item selected">
@@ -65,8 +66,8 @@ template.innerHTML = `
         </div>
         <div class="header-btn-wrapper">
           <img src="../img/header/search-md.svg" />
-          <img src="../img/header/user.svg" />
           <img src="../img/header/map.svg" />
+          <img src="../img/header/user.svg" />
           <img src="../img/header/globe.svg" />
           <div class="language-wrapper">
             <span>한국어</span>
@@ -81,8 +82,31 @@ template.innerHTML = `
           </div>
         </div>
         <div class="profile-popup">
-        <div></div>
-
+          <div class="profile-popup-title">
+            <span>대한민국구석구석 통합 로그인</span>
+            <img src="../img/header/close-white.svg" />
+          </div>
+          <div class="profile-popup-content">
+            <img src="../img/header/popup-logo.png" />
+            <div class="profile-popup-description">
+              <span>
+                투어원패스는 한국관광공사 통합로그인 서비스로
+                <br>
+                SNS인증을 통해 간편하게 이용할 수 있으며,
+                <br>
+                한 번의 로그인으로 한국관광공사에서 운영하는
+                <br>
+                다양한 서비스를 이용하실 수 있습니다.
+              </span>
+            </div>
+            <div class="login-btn">
+              <b>투어원패스</b> 로그인
+            </div>
+            <div class="auto-login">
+              <img src="../img/header/check-empty.svg" />
+              <span>자동 로그인</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -100,6 +124,16 @@ class HeaderComponent extends HTMLElement {
     // 언어 버튼
     const globeBtn = shadow.querySelector('img[src$="globe.svg"]');
     const languageWrapper = shadow.querySelector(".language-wrapper");
+
+    // 팝업창 오버레이 추가
+    const overlay = shadow.querySelector(".popup-overlay");
+    const profilePopup = shadow.querySelector(".profile-popup");
+    const userBtn = shadow.querySelector('img[src$="user.svg"]');
+    const closeBtn = profilePopup.querySelector('img[src$="close-white.svg"]');
+
+    // 팝업 내부 자동로그인
+    const checkImg = profilePopup.querySelector(".auto-login img");
+    let isChecked = false;
 
     languageWrapper.style.display = "none";
 
@@ -125,6 +159,26 @@ class HeaderComponent extends HTMLElement {
       e.stopPropagation();
       const isVisible = languageWrapper.style.display === "flex";
       languageWrapper.style.display = isVisible ? "none" : "flex";
+    });
+
+    // 팝업 열기
+    userBtn.addEventListener("click", () => {
+      profilePopup.style.display = "flex";
+      overlay.style.display = "block";
+    });
+
+    // 팝업 닫기
+    closeBtn.addEventListener("click", () => {
+      profilePopup.style.display = "none";
+      overlay.style.display = "none";
+    });
+
+    // 자동 로그인 토글
+    checkImg.addEventListener("click", () => {
+      isChecked = !isChecked;
+      checkImg.src = isChecked
+        ? "../img/header/check-filled.svg"
+        : "../img/header/check-empty.svg";
     });
 
     titleItems.forEach((item) => {

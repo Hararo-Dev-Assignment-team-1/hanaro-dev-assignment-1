@@ -160,12 +160,85 @@ body * {
 .profile-popup {
   position: fixed;
   top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1002;
   display: flex;
   flex-direction: column;
   width: 450px;
   height: 450px;
+  border: 2px solid black;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 6px;
+  display: none;
+}
+.profile-popup-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  color: #fff;
+  background-color: #333333;
+  box-sizing: border-box;
+}
+.profile-popup-title span {
+  flex-grow: 1;
+  font-weight: 600;
+}
+
+.profile-popup-title img {
+  width: 20px;
+}
+
+.profile-popup-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 20px;
+  text-align: center;
+}
+.profile-popup-content img {
+  object-fit: cover;
+}
+.profile-popup-description {
+  font-size: 16px;
+  color: #666666;
+}
+
+.login-btn {
+  width: 70%;
+  font-size: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.auto-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.auto-login img {
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: none;
 }
