@@ -289,13 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDots();
   });
 
-  // 리사이즈 이벤트
-  // window.addEventListener("resize", () => {
-  //   slideUpdate();
-  //   currentIndex = 0;
-  //   selectedUpdate();
-  //   updateDots();
-  // });
   window.addEventListener("resize", () => {
     slideUpdate(true); // transition 없이 재계산
     selectedUpdate();
