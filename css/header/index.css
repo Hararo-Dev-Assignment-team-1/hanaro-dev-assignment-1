@@ -140,3 +140,9 @@ header:hover .sub-item-wrapper {
   color: black;
   text-decoration: underline;
 }
+
+.sub-item-wrapper .selected {
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}

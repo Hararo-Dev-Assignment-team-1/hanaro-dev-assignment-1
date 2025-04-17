@@ -79,13 +79,14 @@ class HeaderComponent extends HTMLElement {
     const shadow = this.attachShadow({ mode: "open" });
     shadow.appendChild(template.content.cloneNode(true));
 
-    // 현재 경로 확인
     const path = window.location.pathname;
 
-    // 경로에 따라 클래스 설정
     const titleItems = shadow.querySelectorAll(".title-item");
+
     titleItems.forEach((item) => {
+      item.classList.remove("selected"); // ✅ 먼저 초기화
       const label = item.querySelector("span")?.textContent?.trim();
+      const subItems = item.querySelectorAll(".sub-item-wrapper span");
 
       if (label === "홈" && path.includes("/main.html")) {
         item.classList.add("selected");
@@ -93,11 +94,14 @@ class HeaderComponent extends HTMLElement {
         item.classList.add("selected");
       } else if (label === "여행정보" && path.includes("/travel.html")) {
         item.classList.add("selected");
-      } else {
-        item.classList.remove("selected");
+        subItems.forEach((sub) => {
+          if (sub.textContent.trim() === "여행지") {
+            sub.classList.add("selected");
+          }
+        });
       }
 
-      // 클릭 시 페이지 이동 처리
+      // 상위 메뉴 클릭 시 이동
       item.addEventListener("click", () => {
         if (label === "홈") location.href = "/pages/main.html";
         else if (label === "지역") location.href = "/pages/area.html";
@@ -105,6 +109,17 @@ class HeaderComponent extends HTMLElement {
         else {
           alert("준비 중인 서비스입니다.");
         }
+      });
+
+      // 하위 메뉴 클릭 이벤트도 부여
+      subItems.forEach((sub) => {
+        sub.addEventListener("click", (e) => {
+          e.stopPropagation(); // 상위 메뉴 클릭 방지
+
+          const text = sub.textContent.trim();
+          if (text === "여행지") location.href = "/pages/travel.html";
+          else alert("준비 중인 서비스입니다.");
+        });
       });
     });
   }
