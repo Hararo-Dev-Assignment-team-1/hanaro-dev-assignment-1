@@ -19,7 +19,23 @@ function createItemElement(item) {
     <div class="item-content-wrapper">
       <div class="item-title-wrapper">
         <div>${item.title}</div>
-        <img src="../img/travel/dot.svg" />
+        <div class="popup-wrapper">
+          <img src="../img/travel/dot.svg" />
+          <div class="popup">
+            <div class="popup-item">
+              <img src="../img/travel/mark.svg" />
+                즐겨찾기
+              </div>
+            <div class="popup-item">
+              <img src="../img/travel/share.svg" />
+              공유하기
+            </div>
+            <div class="popup-item">
+              <img src="../img/travel/mark-2.svg" />
+              코스에 담기
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <div>${item.region} ${item.city}</div> 
@@ -118,7 +134,6 @@ function renderPagination(totalItems) {
 }
 
 export function renderPaginatedItems() {
-  // 1. 기존 아이템만 제거 (전체 초기화 X)
   const oldItems = mainSectionContent.querySelectorAll(
     ".main-item-wrapper, .pagination-wrapper, .no-place-message"
   );
@@ -132,7 +147,6 @@ export function renderPaginatedItems() {
   const end = start + ITEMS_PER_PAGE;
   const itemsToShow = filteredData.slice(start, end);
 
-  // 2. 데이터가 없는 경우 메시지 출력
   if (itemsToShow.length === 0) {
     const message = document.createElement("div");
     message.className = "no-place-message";
@@ -141,13 +155,11 @@ export function renderPaginatedItems() {
     return;
   }
 
-  // 3. 아이템 렌더링
   itemsToShow.forEach((item) => {
     const itemElement = createItemElement(item);
     mainSectionContent.appendChild(itemElement);
   });
 
-  // 4. 페이지네이션 렌더링
   renderPagination(filteredData.length);
 }
 
@@ -167,14 +179,38 @@ document.addEventListener("DOMContentLoaded", () => {
   icon.addEventListener("click", () => {
     pullBox.classList.toggle("show");
   });
+
   closeBtn.addEventListener("click", (e) => {
     pullBox.classList.remove("show");
   });
 
-  // 바깥 클릭 시 닫히도록
   document.addEventListener("click", (e) => {
     if (!annotationWrapper.contains(e.target)) {
       pullBox.classList.remove("show");
     }
+  });
+
+  document.addEventListener("click", (e) => {
+    const overlay = document.getElementById("popupOverlay");
+
+    document.querySelectorAll(".popup").forEach((popup) => {
+      popup.classList.remove("show");
+    });
+    overlay.classList.remove("show");
+
+    const wrapper = e.target.closest(".popup-wrapper");
+    if (wrapper) {
+      const popup = wrapper.querySelector(".popup");
+      popup.classList.add("show");
+      overlay.classList.add("show");
+      e.stopPropagation();
+    }
+  });
+
+  document.getElementById("popupOverlay").addEventListener("click", () => {
+    document.querySelectorAll(".popup").forEach((popup) => {
+      popup.classList.remove("show");
+    });
+    document.getElementById("popupOverlay").classList.remove("show");
   });
 });
