@@ -1,0 +1,131 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.main-footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 20px;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+
+}
+
+.footer-top img {
+    width: 26px;
+    height: auto;
+    transform: translateY(-5px);
+}
+
+.footer-top p {
+    font-weight: 345;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/* 구분선 */
+.section-divider {
+    border-top: 1px solid rgb(225, 225, 225);
+    width: 100%;
+    max-width: 940px;
+    margin: 15px auto;
+}
+
+/* 배너 영역 */
+.footer-banners {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 8px auto;
+}
+
+.footer-banners a img {
+    height: 70px;
+    border-radius: 6px;
+}
+
+/* 링크 텍스트 */
+.footer-links {
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 940px;
+}
+
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 23.5px 0 0;
+    /* 위, 오른쪽, 아래, 왼쪽 */
+    font-size: 13px;
+}
+
+.footer-links .link-highlight {
+    color: #1103d6;
+  }
+
+/* 주소 등 정보 */
+.ft_address {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.ft_address li {
+    margin-bottom: 3px;
+}
+
+.ft_address li span {
+    margin-right: 3px;
+    display: inline-block;
+}
+
+/* 협력사 영역 */
+.footer-credits {
+    display: flex;
+    justify-content: space-between; /* 좌우 끝으로 정렬 */
+    align-items: center;
+    max-width: 940px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.footer-credits .copyright {
+    font-size: 14px;
+    color: #777;
+}
+
+.footer-credits .partners a {
+    display: inline-block;
+    margin-left: 18px;
+}
+
+.footer-credits .partners img {
+    height: 30px;
+    vertical-align: middle;
+}
