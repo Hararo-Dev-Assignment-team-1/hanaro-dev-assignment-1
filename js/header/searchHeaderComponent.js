@@ -5,7 +5,7 @@ template.innerHTML = `
   <header class="search-header">
     <div class="header-search-container">
       <div class="header-search-wrapper-title">
-        <img class="logo-btn" src="../img/logo.svg" />
+        <img src="../img/logo.svg" />
         <img class="close-btn" src="../img/header/close.svg" />
       </div>
       <div class="header-search-wrapper">
@@ -74,7 +74,7 @@ class SearchHeaderComponent extends HTMLElement {
 
   connectedCallback() {
     const shadow = this.shadowRoot;
-    const logoBtn = shadow.querySelector(".logo-btn");
+    const logoBtn = shadow.querySelector('img[src$="logo.svg"]');
     const searchCategory = shadow.querySelector(".search-category");
     const selectedCategory = shadow.querySelector(".selected-category");
     const dropdownContainer = shadow.querySelector(".drop-down-container");
