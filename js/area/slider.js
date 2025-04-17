@@ -11,7 +11,7 @@ window.openKakaoMap = function (address) {
   window.open(url, "_blank");
 };
 
-export function slideUpdate() {
+export function slideUpdate(skipTransition = false) {
   const initialPosition = sliderContainer.clientWidth / 2 - slideWidth / 2;
 
   if (sliderData.length === 0) {
@@ -32,11 +32,17 @@ export function slideUpdate() {
   }
 
   selectedUpdate();
-  sliderContainer.style.transition = "none";
+
+  // transition 옵션에 따라 처리
+  if (skipTransition) {
+    sliderContainer.style.transition = "none";
+  } else {
+    sliderContainer.style.transition = "transform 0.5s ease-in-out";
+  }
+
   sliderContainer.style.transform = `translateX(${
     initialPosition - currentIndex * slideWidth
   }px)`;
-  sliderContainer.style.transition = "transform 0.5s ease-in-out";
 }
 
 function createDots() {
@@ -67,6 +73,7 @@ function updateDots() {
     }
   });
 }
+
 function hideBtn() {
   nextBtn = document.getElementById("sliderNextBtn");
   nextBtn.style.visibility = "hidden";
@@ -145,7 +152,7 @@ export function updateEventSlider(filteredEvents) {
     slideWidth = slides[0].offsetWidth + slideMarginRight;
   }
   currentIndex = 0;
-  slideUpdate();
+  slideUpdate(true); // transition 없이 초기 위치 설정
   createDots();
 }
 
@@ -282,10 +289,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDots();
   });
 
-  // 리사이즈 이벤트
   window.addEventListener("resize", () => {
-    slideUpdate();
-    currentIndex = 0;
+    slideUpdate(true); // transition 없이 재계산
     selectedUpdate();
     updateDots();
   });
