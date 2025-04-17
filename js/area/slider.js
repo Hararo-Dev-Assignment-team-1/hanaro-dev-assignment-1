@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let startX = 0;
   let isDragging = false;
 
+  // mousedown : 드래그 시작
   sliderContainer.addEventListener("mousedown", (e) => {
     startX = e.clientX;
     isDragging = true;
@@ -247,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sliderContainer.style.transition = "none"; // 드래그 중 transition 제거
   });
 
+  // mousemove : 드래그 중
   sliderContainer.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     const diff = e.clientX - startX;
@@ -261,6 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }px)`;
   });
 
+  // mouseup : 드래그 끝
   sliderContainer.addEventListener("mouseup", (e) => {
     if (!isDragging) return;
     const endX = e.clientX;
