@@ -85,7 +85,8 @@ function createButtons(container, items, type) {
           .querySelectorAll(".hashtag-button")
           .forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
-
+        const areaTitle = document.querySelector(".area-title");
+        areaTitle.textContent = filterState.region;
         if (type === "region") {
           filterState.city = "#전체";
           const cities = cityMap[label];
