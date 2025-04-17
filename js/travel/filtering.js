@@ -189,6 +189,13 @@ sortButtons.forEach((btn) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = document.querySelector(".sub-section-title img");
+
+  // 초기 렌더링 시 최신순으로 정렬
+  const sortButtons = document.querySelectorAll(".ordering-wrapper span");
+  filterState.sortBy = "latest";
+  sortButtons[0].classList.add("selected");
+  applyFilters();
+
   if (resetBtn) {
     resetBtn.addEventListener("click", resetFilters);
   }

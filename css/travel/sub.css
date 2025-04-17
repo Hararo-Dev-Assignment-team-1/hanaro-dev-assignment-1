@@ -1,5 +1,7 @@
 .sub-section {
-  flex: 1;
+  width: 400px;
+  min-width: 400px;
+  flex-shrink: 0;
   background-color: #f7f7f7;
   flex-direction: column;
   padding: 20px;

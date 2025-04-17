@@ -159,4 +159,22 @@ export function setFilteredData(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderPaginatedItems();
+  const annotationWrapper = document.querySelector(".annotation-wrapper");
+  const pullBox = annotationWrapper.querySelector(".pull");
+  const icon = annotationWrapper.querySelector("img");
+  const closeBtn = annotationWrapper.querySelector(".close-btn");
+
+  icon.addEventListener("click", () => {
+    pullBox.classList.toggle("show");
+  });
+  closeBtn.addEventListener("click", (e) => {
+    pullBox.classList.remove("show");
+  });
+
+  // 바깥 클릭 시 닫히도록
+  document.addEventListener("click", (e) => {
+    if (!annotationWrapper.contains(e.target)) {
+      pullBox.classList.remove("show");
+    }
+  });
 });
