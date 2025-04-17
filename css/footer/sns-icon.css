@@ -1,0 +1,64 @@
+/* SNS 아이콘 영역 */
+.sns-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.sns-icons {
+    display: flex;
+    gap: 24px; /* 아이콘 간 간격 */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sns-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 0px 5px;
+    transition: background-color 0.3s;
+}
+
+.sns-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+}
+
+.sns-item span {
+    font-size: 15px;
+    line-height: 1.1;
+    text-align: left;
+    display: inline-block;
+    color: #666;
+}
+
+.sns-item.blog:hover img {
+    content: url("../../img/footer/blog_2.png");
+}
+
+.sns-item.post:hover img {
+    content: url("../../img/footer/post_2.png");
+}
+
+.sns-item.facebook:hover img {
+    content: url("../../img/footer/facebook_2.png");
+}
+
+.sns-item.x:hover img {
+    content: url("../../img/footer/x_2.png");
+}
+
+.sns-item.kakaostory:hover img {
+    content: url("../../img/footer/kakaostory_2.png");
+}
+
+.sns-item.instagram:hover img {
+    content: url("../../img/footer/instagram_2.png");
+}
+
+.sns-item.band:hover img {
+    content: url("../../img/footer/band_2.png");
+}
