@@ -6,6 +6,9 @@ template.innerHTML = `
   <link rel="stylesheet" href="/css/header/index.css" />
   <header class="main-header">
       <div class="header-wrapper">
+        <div class="popup-overlay"></div>
+        <div class="overlay map"></div>
+
         <img src="../img/logo.svg" />
         <div class="header-title">
           <div class="title-item selected">
@@ -65,8 +68,8 @@ template.innerHTML = `
         </div>
         <div class="header-btn-wrapper">
           <img src="../img/header/search-md.svg" />
-          <img src="../img/header/user.svg" />
           <img src="../img/header/map.svg" />
+          <img src="../img/header/user.svg" />
           <img src="../img/header/globe.svg" />
           <div class="language-wrapper">
             <span>한국어</span>
@@ -81,8 +84,64 @@ template.innerHTML = `
           </div>
         </div>
         <div class="profile-popup">
-        <div></div>
+          <div class="profile-popup-title">
+            <span>대한민국구석구석 통합 로그인</span>
+            <img src="../img/header/close-white.svg" />
+          </div>
+          <div class="profile-popup-content">
+            <img src="../img/header/popup-logo.png" />
+            <div class="profile-popup-description">
+              <span>
+                투어원패스는 한국관광공사 통합로그인 서비스로
+                <br>
+                SNS인증을 통해 간편하게 이용할 수 있으며,
+                <br>
+                한 번의 로그인으로 한국관광공사에서 운영하는
+                <br>
+                다양한 서비스를 이용하실 수 있습니다.
+              </span>
+            </div>
+            <div class="login-btn">
+              <b>투어원패스</b> 로그인
+            </div>
+            <div class="auto-login">
+              <img src="../img/header/check-empty.svg" />
+              <span>자동 로그인</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="map-popup">
+          <img src="../img/travel/mark-2.svg"/>
+          <span class="map-popup-title">위치기반 서비스 이용 동의</span>
+          <div class="map-popup-description">
+            <span>
+              한국관광공사 대한민국 구석구석 홈페이지는 위치 정보의
+              <br>
+              보호 및 이용 등에 관한 법률에 따라 현재 위치 확인, 주변
+              <br>
+              관광지 찾기가 포함된 서비스 이용을 위해서 위치기반
+              <br>
+              서비스 이용 약관 동의가 필요합니다. 동의하지 않는 경우
+              <br>
+              위치기반 서비스 이용에 제약을 받을 수 있습니다.
+            </span>
+          </div>
+          <div class="map-popup-info-wrapper">
+            <div class="map-popup-info-item">
+              <span>ㆍ위치 서비스 이용 방법 안내</span>
+              <img src="../img/header/question-mark.svg" />
+            </div>
+            <div class="map-popup-info-item">
+              <span>ㆍ위치기반 서비스 이용약관 보기</span>
+              <img src="../img/header/question-mark.svg" />
+            </div>
+          </div>
+          <div class="map-popup-btn-wrapper">
+            <div class="map-popup-reject-btn">거절</div>
+            <div class="map-popup-agree-btn">동의</div>
+          </div>
+          <img class="map-popup-close-btn" src="../img/header/close.svg"/>
         </div>
       </div>
     </header>
@@ -101,6 +160,24 @@ class HeaderComponent extends HTMLElement {
     const globeBtn = shadow.querySelector('img[src$="globe.svg"]');
     const languageWrapper = shadow.querySelector(".language-wrapper");
 
+    // 팝업창 오버레이 추가
+    const overlay = shadow.querySelector(".popup-overlay");
+    const profilePopup = shadow.querySelector(".profile-popup");
+    const userBtn = shadow.querySelector('img[src$="user.svg"]');
+    const closeBtn = profilePopup.querySelector('img[src$="close-white.svg"]');
+
+    // 팝업 내부 자동로그인
+    const checkAuto = profilePopup.querySelector(".auto-login");
+    const checkImg = profilePopup.querySelector(".auto-login img");
+    let isChecked = false;
+
+    // 지도 버튼 팝업
+    const mapBtn = shadow.querySelector('img[src$="map.svg"]');
+    const mapPopup = shadow.querySelector(".map-popup");
+    const mapOverlay = shadow.querySelector(".overlay.map");
+    const mapCloseBtn = shadow.querySelector(".map-popup-close-btn");
+
+    // 언어 선택 wrapper
     languageWrapper.style.display = "none";
 
     const path = window.location.pathname;
@@ -125,6 +202,38 @@ class HeaderComponent extends HTMLElement {
       e.stopPropagation();
       const isVisible = languageWrapper.style.display === "flex";
       languageWrapper.style.display = isVisible ? "none" : "flex";
+    });
+
+    // 팝업 열기
+    userBtn.addEventListener("click", () => {
+      profilePopup.style.display = "flex";
+      overlay.style.display = "block";
+    });
+
+    // 팝업 닫기
+    closeBtn.addEventListener("click", () => {
+      profilePopup.style.display = "none";
+      overlay.style.display = "none";
+    });
+
+    // 자동 로그인 토글
+    checkAuto.addEventListener("click", () => {
+      isChecked = !isChecked;
+      checkImg.src = isChecked
+        ? "../img/header/check-filled.svg"
+        : "../img/header/check-empty.svg";
+    });
+
+    // 지도 팝업 열기
+    mapBtn.addEventListener("click", () => {
+      mapPopup.style.display = "flex";
+      mapOverlay.style.display = "block";
+    });
+
+    // 지도 팝업 닫기
+    mapCloseBtn.addEventListener("click", () => {
+      mapPopup.style.display = "none";
+      mapOverlay.style.display = "none";
     });
 
     titleItems.forEach((item) => {
