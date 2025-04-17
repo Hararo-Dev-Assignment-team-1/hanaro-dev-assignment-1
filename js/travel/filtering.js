@@ -1,5 +1,7 @@
 // filtering.js
 import { travelData } from "./travelData.js";
+import { regions } from "./regions.js";
+
 import { renderPaginatedItems, setFilteredData } from "./pagination.js";
 
 // 현재 선택된 필터 상태
@@ -15,13 +17,12 @@ const cityContainer = document.querySelector('[data-type="city"]');
 const tagContainer = document.querySelector('[data-type="tag"]');
 const resetBtn = document.getElementById("resetBtn");
 
-const cityMap = travelData.reduce((map, item) => {
-  const regionKey = `#${item.region}`;
-  const cityKey = `#${item.city}`;
-  if (!map[regionKey]) map[regionKey] = new Set();
-  map[regionKey].add(cityKey);
-  return map;
-}, {});
+const cityMap = {};
+Object.entries(regions).forEach(([region, cities]) => {
+  const regionKey = `#${region}`;
+  const cityKeys = cities.map((city) => `#${city}`);
+  cityMap[regionKey] = cityKeys;
+});
 
 Object.keys(cityMap).forEach((region) => {
   cityMap[region] = Array.from(cityMap[region]);
