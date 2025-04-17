@@ -2,72 +2,60 @@
 
 [대한민국 구석구석](https://korean.visitkorea.or.kr/main/area.do) 웹사이트를 클론하여 제작한 프론트엔드 프로젝트입니다.
 ![메인 페이지](./img/homepage_1.png)  
-![지역 페이지](./img/homepage_2.png)
-![여행지 페이지](./img/homepage_2.png)
-
+![지역 페이지](./img/homepage_2.png)  
+![여행지 페이지](./img/homepage_3.png)  
 
 
 
 ## 👥 팀원 소개
-
 | 이름 | 역할 |
 |------|------|
 | 곽희건 | 프론트엔드 개발 |
-| 김유림 | 프론트엔드 개발 |
-
+| 김유림 | 프론트엔드 개발 |  
 
 
 
 ## 🛠 기술 스택
-
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Version Control**: Git & GitHub
-
+- **Frontend**: HTML5, CSS3, JavaScript  
+- **Version Control**: Git & GitHub  
 
 
 
 ## 🔀 Git 브랜치 전략
-
 - `main`: 최종 배포 브랜치  
 - `develop`: 통합 개발 브랜치  
 - `이슈번호-작업내용`: 기능 단위 브랜치 (이슈 기반 브랜치)  
-  - 예시: `9-footer-개발` ← `#9 Footer 개발` 이슈 기반
-
+  - 예시: `9-footer-개발` ← `#9 Footer 개발` 이슈 기반  
 
 
 
 ## 💡 Git 협업 컨벤션
-
-- **브랜치 생성**
+- **브랜치 생성**  
   - 형식: `이슈번호-작업내용`  
   - 예시: `21-header-버튼-기능-구현`, `27-지역-페이지-슬라이더-드래그-이벤트`
 
-- **커밋 메시지 규칙**
+- **커밋 메시지 규칙**  
   - 형식: `태그: 작업 내용` (콜론 뒤 한 칸 띄움)  
   - 예시: `feat: 여행지 페이지 필터링`
 
   주요 태그:
-  - `feat`: 기능 추가
-  - `fix`: 버그 수정
-  - `style`: 스타일/레이아웃 수정
-  - `refactor`: 코드 리팩토링
-  - `docs`: 문서 수정
+  - `feat`: 기능 추가  
+  - `fix`: 버그 수정  
+  - `style`: 스타일/레이아웃 수정  
+  - `refactor`: 코드 리팩토링  
+  - `docs`: 문서 수정  
   - `chore`: 설정, 환경 등 기타 작업
 
-
-
-- **Pull Request 작성**
-  - 제목: 형식 제한 없음
+- **Pull Request 작성**  
+  - 제목: 형식 제한 없음  
   - 대상 브랜치: `develop`  
   - Reviewer 지정 필수  
   - Self-Merge 금지  
-  - 충돌 발생 시 작성자가 직접 해결
-
+  - 충돌 발생 시 작성자가 직접 해결  
 
 
 
 ## 📁 폴더 구조
-
 ```bash
 📦project-root
  ┣ 📂css          # 스타일 파일
@@ -77,4 +65,3 @@
  ┣ 📜README.md
  ┣ 📜makeData.py
  ┗ 📜makeTravelData.js
-
