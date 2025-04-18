@@ -30,6 +30,15 @@
 
 
 ## 💡 Git 협업 컨벤션
+- **이슈 생성**  
+  - 형식:
+    - Github Organization 의 Project 기능을 사용해 이슈 생성 및 관리
+    - 주요 기능 및 Assignees, label(enhancement, bug 등 이슈 목적에 맞게) 지정
+  - 예시:
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/70ad35cf-771b-4e2a-a719-c338b44b7541" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/becbe804-2d7f-43bd-bb00-a15e1f28acf3" />
+
+
 - **브랜치 생성**  
   - 형식: `이슈번호-작업내용`  
   - 예시: `21-header-버튼-기능-구현`, `27-지역-페이지-슬라이더-드래그-이벤트`
@@ -47,11 +56,21 @@
   - `chore`: 설정, 환경 등 기타 작업
 
 - **Pull Request 작성**  
-  - 제목: 형식 제한 없음  
-  - 대상 브랜치: `develop`  
+  - 제목: 형식 제한 없음
+  - 대상 브랜치: `develop`
+  - 내용 :
+    - 관련 이슈 번호
+    - 주요 기능 및 각 기능 별 구현 방식, 진행 방향 등 설명
+    - 필요 시 화면 스크린샷 추가
+    - [bug] 관련 이슈일 경우 현상 발생 이유와 해결 방법 작성
   - Reviewer 지정 필수  
   - Self-Merge 금지  
-  - 충돌 발생 시 작성자가 직접 해결  
+  - 충돌 발생 시 작성자가 직접 해결
+  - 예시 : [PR 작성 예시](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/16)
+
+
+
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/c045caca-ae53-4d8d-8824-524bb06139d3" />
 
 
 
