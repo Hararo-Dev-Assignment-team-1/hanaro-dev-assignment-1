@@ -198,7 +198,7 @@ class HeaderComponent extends HTMLElement {
 
     // 홈 버튼 이동
     logoBtn.addEventListener("click", () => {
-      location.href = "/pages/main.html";
+      location.href = "main.html";
     });
 
     // 언어 버튼
@@ -273,9 +273,9 @@ class HeaderComponent extends HTMLElement {
 
       // 상위 메뉴 클릭 시 이동
       item.addEventListener("click", () => {
-        if (label === "홈") location.href = "/pages/main.html";
-        else if (label === "지역") location.href = "/pages/area.html";
-        else if (label === "여행정보") location.href = "/pages/travel.html";
+        if (label === "홈") location.href = "main.html";
+        else if (label === "지역") location.href = "area.html";
+        else if (label === "여행정보") location.href = "travel.html";
         else {
           alert("준비 중인 서비스입니다.");
         }
@@ -287,7 +287,7 @@ class HeaderComponent extends HTMLElement {
           e.stopPropagation(); // 상위 메뉴 클릭 방지
 
           const text = sub.textContent.trim();
-          if (text === "여행지") location.href = "/pages/travel.html";
+          if (text === "여행지") location.href = "travel.html";
           else alert("준비 중인 서비스입니다.");
         });
       });
