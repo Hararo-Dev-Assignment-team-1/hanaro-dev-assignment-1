@@ -169,6 +169,8 @@ class HeaderComponent extends HTMLElement {
     // 팝업 내부 자동로그인
     const checkAuto = profilePopup.querySelector(".auto-login");
     const checkImg = profilePopup.querySelector(".auto-login img");
+    const loginBtn = profilePopup.querySelector(".login-btn");
+
     let isChecked = false;
 
     // 지도 버튼 팝업
@@ -176,6 +178,8 @@ class HeaderComponent extends HTMLElement {
     const mapPopup = shadow.querySelector(".map-popup");
     const mapOverlay = shadow.querySelector(".overlay.map");
     const mapCloseBtn = shadow.querySelector(".map-popup-close-btn");
+    const mapRejectBtn = shadow.querySelector(".map-popup-reject-btn");
+    const mapAgreeBtn = shadow.querySelector(".map-popup-agree-btn");
 
     // 언어 선택 wrapper
     languageWrapper.style.display = "none";
@@ -223,6 +227,9 @@ class HeaderComponent extends HTMLElement {
         ? "../img/header/check-filled.svg"
         : "../img/header/check-empty.svg";
     });
+    loginBtn.addEventListener("click", () => {
+      alert("준비 중인 서비스입니다.");
+    });
 
     // 지도 팝업 열기
     mapBtn.addEventListener("click", () => {
@@ -234,6 +241,16 @@ class HeaderComponent extends HTMLElement {
     mapCloseBtn.addEventListener("click", () => {
       mapPopup.style.display = "none";
       mapOverlay.style.display = "none";
+    });
+
+    mapRejectBtn.addEventListener("click", () => {
+      mapPopup.style.display = "none";
+      mapOverlay.style.display = "none";
+    });
+
+    // 지도 동의 버튼
+    mapAgreeBtn.addEventListener("click", () => {
+      alert("준비 중인 서비스입니다.");
     });
 
     titleItems.forEach((item) => {

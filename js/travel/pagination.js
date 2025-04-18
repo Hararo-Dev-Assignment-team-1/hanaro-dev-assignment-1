@@ -171,10 +171,33 @@ export function setFilteredData(data) {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderPaginatedItems();
+
   const annotationWrapper = document.querySelector(".annotation-wrapper");
   const pullBox = annotationWrapper.querySelector(".pull");
   const icon = annotationWrapper.querySelector("img");
   const closeBtn = annotationWrapper.querySelector(".close-btn");
+  // const popupBookMark = document.querySelector('img[src$="mark.svg"]');
+  mainSectionContent.addEventListener("click", (e) => {
+    const target = e.target.closest(".popup-item");
+    if (!target) return;
+
+    const popupItems = Array.from(
+      target.parentElement.querySelectorAll(".popup-item")
+    );
+    const index = popupItems.indexOf(target);
+
+    switch (index) {
+      case 0:
+        alert("준비 중인 서비스입니다.");
+        break;
+      case 1:
+        alert("준비 중인 서비스입니다.");
+        break;
+      case 2:
+        alert("준비 중인 서비스입니다.");
+        break;
+    }
+  });
 
   icon.addEventListener("click", () => {
     pullBox.classList.toggle("show");
