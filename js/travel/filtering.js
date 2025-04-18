@@ -4,7 +4,6 @@ import { regions } from "./regions.js";
 
 import { renderPaginatedItems, setFilteredData } from "./pagination.js";
 
-// 현재 선택된 필터 상태
 const filterState = {
   region: "#전체",
   city: "#전체",
@@ -15,7 +14,6 @@ const filterState = {
 const regionContainer = document.querySelector('[data-type="region"]');
 const cityContainer = document.querySelector('[data-type="city"]');
 const tagContainer = document.querySelector('[data-type="tag"]');
-const resetBtn = document.getElementById("resetBtn");
 
 const cityMap = {};
 Object.entries(regions).forEach(([region, cities]) => {
@@ -70,9 +68,9 @@ function createButtons(container, items, type) {
           filterState.tag = filterState.tag.filter((t) => t !== "#전체");
           const index = filterState.tag.indexOf(label);
           if (index > -1) {
-            filterState.tag.splice(index, 1); // 선택 해제
+            filterState.tag.splice(index, 1);
           } else {
-            filterState.tag.push(label); // 선택 추가
+            filterState.tag.push(label);
           }
 
           if (filterState.tag.length === 0) {
@@ -86,8 +84,6 @@ function createButtons(container, items, type) {
           .querySelectorAll(".hashtag-button")
           .forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
-
-        // 상단 타이틀 변경
 
         const areaTitle = document.querySelector(".area-title");
         areaTitle.textContent = filterState.region;
