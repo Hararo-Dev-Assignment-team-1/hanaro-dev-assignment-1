@@ -9,8 +9,22 @@
 - 현재 슬라이드 인덱스를 표시하는 슬라이드 인디케이터 및 프로그레스 바 포함
   
 ![지역 페이지](./img/homepage_2.png)  
-![여행지 페이지](./img/homepage_3.png)  
+### 지역 페이지 주요 기능
+- 선택한 날짜를 기준으로 행사 데이터를 불러오는 달력 구현
+- 불러온 행사 데이터를 표시하는 슬라이더 구현
+- 하단의 양 쪽 이동 버튼 및 Dot 을 클릭하여 슬라이더 이동 가능
+- 또는 클릭하여 옆으로 끌어서 이동 가능
+- 상세 설명 및 관련 이슈
+  - [PR #10](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/10) / [PR #14](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/14) / [PR #28](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/28) / [PR #31](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/31)
 
+
+![여행지 페이지](./img/homepage_3.png)  
+### 여행지 페이지 주요 기능
+- 최신순, 거리순, 인기순으로 각각 정렬 기능
+- 하단의 페이지네이션 기능을 통한 데이터 표시 조절
+- 좌측 해시태그를 통한 필터링 및 필터링 초기화 기능 구현
+- 상세 설명 및 관련 이슈
+  - [PR #16](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/16) / [PR #26](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/26)
 
 
 ## 👥 팀원 소개
