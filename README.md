@@ -7,6 +7,8 @@
 - 좌우 이동 버튼과 터치/드래그 이벤트로 슬라이드 전환 가능
 - 슬라이드 전환 시 텍스트와 이미지가 양쪽에서 동시에 분할 애니메이션으로 이동
 - 현재 슬라이드 인덱스를 표시하는 슬라이드 인디케이터 및 프로그레스 바 포함
+- 상세 설명 및 관련 이슈
+    - [PR #15](https://github.com/Hararo-Dev-Assignment-team-1/hanaro-dev-assignment-1/pull/15)
   
 ![지역 페이지](./img/homepage_2.png)  
 ### 지역 페이지 주요 기능
